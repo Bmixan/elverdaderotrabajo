@@ -67,3 +67,20 @@ else:
         print('Has fallado!')
         tablero[fila][columna]= '-'
         print_tablero(tablero)
+else:
+    if fila>10 or columna>10:
+        while fila>10 or columna>10:
+            print('La coordenada ingresada esta fuera de limites.')
+            print('Por favor ingresa una coordenada apropiada.')
+            fila= int(input('Fila: '))-1
+            columna=int(input('Columna: '))-1
+    elif tablero[fila][columna]== '-':
+        while tablero[fila][columna]== '-':
+            print('Ya le has disparado a la coordenada elegida.')
+            print('Por favor ingresa una coordenada apropiada.')
+            fila= int(input('Fila: '))-1
+            columna=int(input('Columna: '))-1
+    else:
+        print('Has fallado!')
+        tablero[fila][columna]= '-'
+        print_tablero(tablero)
